@@ -1,22 +1,38 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function WordCell() {
   return (
     <View style={styles.testStyle}>
-      <Text> Текст на русском </Text>
+      <Text style={styles.russLabel} > Текст на русском </Text>
+      <Text style={styles.englLabel} > Текст на английском </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
     testStyle: {
-        backgroundColor: '#aaa'
+        backgroundColor: '#aaa',
+        height: 75
     },
     russLabel: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 25,
-      }
+        top: 8,
+        paddingHorizontal: 16,
+        textAlign: 'left',
+        // height: 25,
+        fontSize: 25,
+        fontWeight: 'bold'
+      },
+    englLabel: {
+      top: 8,
+      paddingHorizontal: 16,
+      textAlign: 'left',
+      fontSize: 25
+    },
+    buttonStyle: {
+      height: 50,
+      width: 50,
+      top: 0,
+      right:0,
+      backgroundColor: '#888'
+    }
 });
