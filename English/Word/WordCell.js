@@ -1,5 +1,11 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity
+} from 'react-native';
 
 export default function WordCell() {
   const favoritImage = require('../assets/favorit/favorit.png')
@@ -7,12 +13,18 @@ export default function WordCell() {
 
   return (
     <View style={styles.testStyle}>
-      <Image
-        style={styles.imageStyle}
-        source={notFavoritImage}
-      />
-      <Text style={styles.russLabel} > Текст на русском </Text>
+      <Text style={styles.russLabel} numberOfLines={1}> Текст на русскомb000000000000 </Text>
       <Text style={styles.englLabel} > Текст на английском </Text>
+      <TouchableOpacity
+        style={styles.buttonWithImageStyle}
+        activeOpacity={1}
+        onPress={() => { console.log("0000") }}
+      >
+        <Image
+          source={notFavoritImage}
+          style={styles.imageStyle}
+        />
+      </TouchableOpacity>
     </View>
   );
 }
@@ -36,9 +48,15 @@ const styles = StyleSheet.create({
     fontSize: 25
   },
   imageStyle: {
+    height: 25,
+    width: 25
+  },
+  buttonWithImageStyle: {
     height: 50,
     width: 50,
     position: 'absolute',
-    right: 0
+    right: 0,
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
