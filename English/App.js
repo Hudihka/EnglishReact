@@ -1,30 +1,13 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import WordSegment from './Word/WordSegment';
 import WordCell from './Word/WordCell';
-import SegmentedControl from "segmented-control-rn";
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
 export default function App() {
-
-  const [activeIndex, setIndex] = useState(0);
-
-  const segments = [
-    {
-      active: <Text style={styles.selectSegment} > Все </Text >,
-      inactive: <Text style={styles.noSelectSegment}> Все </Text >,
-    },
-    {
-      active: <Text style={styles.selectSegment}> Фаворит </Text >,
-      inactive: <Text style={styles.noSelectSegment}> Фаворит </Text>,
-    }
-  ];
-
   return (
     <View style={styles.container}>
-      <SegmentedControl
-      // onChange={(index) => setIndex(index)}
-      // segments={segments}
-      // selectedIndex={activeIndex}
-      />
+      <WordSegment />
       <WordCell />
     </View>
   );
