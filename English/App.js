@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import WordSegment from './Word/WordSegment';
 import WordCell from './Word/WordCell';
-import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import WordSwitch from './Word/WordSwitch';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <WordSegment />
+      <WordSwitch />
       <WordCell />
     </View>
   );
