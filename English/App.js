@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigation } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import WordSegment from './Word/WordSegment';
 import WordCell from './Word/WordCell';

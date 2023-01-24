@@ -23,12 +23,12 @@ export default function WordSwitch() {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginHorizontal: 16,
-        bottom: 16
+        marginHorizontal: 16
     },
     labbelStyle: {
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        left: 16
         // ,
         // flex: 1,
         // alignContent: 'center'
